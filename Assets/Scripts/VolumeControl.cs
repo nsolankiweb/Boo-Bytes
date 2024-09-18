@@ -29,13 +29,13 @@ public class VolumeControl : MonoBehaviour
 
             if (initialRotation + 5 < currentRotation)
             {
-                AudioListener.volume += 0.1f;
+                AudioListener.volume += 0.25f;
                 initialRotation = currentRotation;
             }
 
             if (initialRotation - 5 > currentRotation)
             {
-                AudioListener.volume -= 0.1f;
+                AudioListener.volume -= 0.25f;
                 initialRotation = currentRotation;
             }
             
