@@ -5,15 +5,14 @@ using Vuforia;
 
 public class CameraControl : MonoBehaviour
 {
-    // Start is called before the first frame update
     bool isOn = true;
     private VuforiaBehaviour arCamera; 
+
     void Start()
     {
         arCamera = GetComponent<VuforiaBehaviour>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -25,12 +24,10 @@ public class CameraControl : MonoBehaviour
 
         if (isOn)
         {
-            //arCamera.enabled = false;
             isOn = false;
         }
         else
-        {
-            //arCamera.enabled = true;
+        { 
             isOn = true;
         }
 

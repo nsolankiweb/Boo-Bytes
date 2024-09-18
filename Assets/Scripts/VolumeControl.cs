@@ -27,11 +27,6 @@ public class VolumeControl : MonoBehaviour
         {
             float currentRotation = transform.eulerAngles.y;
 
-            //float rotationDiff = currentRotation - initialRotation;
-
-            //float volumeLevel = Mathf.Clamp((rotationDiff + 90) / 100, 0, 1);
-            //AudioListener.volume = volumeLevel;
-
             if (initialRotation + 5 < currentRotation)
             {
                 AudioListener.volume += 0.1f;
@@ -44,8 +39,6 @@ public class VolumeControl : MonoBehaviour
                 initialRotation = currentRotation;
             }
             
-            
-
         }
     }
 
