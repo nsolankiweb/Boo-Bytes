@@ -16,7 +16,7 @@ public class ModelInteraction : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 
-            Plane plane = new Plane(Vector3.up, transform.position);
+            Plane plane = new Plane(Vector3.forward, transform.position);
 
             float distance = 0; 
 
