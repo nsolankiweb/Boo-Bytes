@@ -17,6 +17,8 @@ public class ClueOneInteraction : MonoBehaviour
     GameObject cube2;
     [SerializeField]
     GameObject cube3;
+    [SerializeField]
+    AudioSource sfx;
 
 
     // Start is called before the first frame update
@@ -28,7 +30,9 @@ public class ClueOneInteraction : MonoBehaviour
     void Start()
     {
         monster.SetActive(false);
-        clueText.SetActive(false);  
+        clueText.SetActive(false); 
+        sfx.enabled = true;
+
 
     }
 
@@ -49,16 +53,19 @@ public class ClueOneInteraction : MonoBehaviour
                     case "Cube01":
                         cube1s = true;
                         cube1.SetActive(false);
+                        sfx.Play();
                         break;
 
                     case "Cube02":
                         cube2s = true;
                         cube2.SetActive(false);
+                        sfx.Play();
                         break;
 
                     case "Cube03":
                         cube3s = true;
                         cube3.SetActive(false);
+                        sfx.Play();
                         break;
                     default:
                         break;
