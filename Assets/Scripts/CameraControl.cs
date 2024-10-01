@@ -5,8 +5,13 @@ using Vuforia;
 
 public class CameraControl : MonoBehaviour
 {
-    bool isOn = true;
-    private VuforiaBehaviour arCamera; 
+    bool isOnAR = true;
+    bool isOnDebug = false;
+    private VuforiaBehaviour arCamera;
+
+    [SerializeField]
+    private GameObject imageUI; 
+
 
     void Start()
     {
@@ -22,18 +27,41 @@ public class CameraControl : MonoBehaviour
     {
         var imageTargets = FindObjectsOfType<ImageTargetBehaviour>(); 
 
-        if (isOn)
+        if (isOnAR)
         {
-            isOn = false;
+            isOnAR = false;
         }
         else
         { 
-            isOn = true;
+            isOnAR = true;
         }
 
         foreach (var imageTarget in imageTargets)
         {
-            imageTarget.enabled = isOn; 
+            imageTarget.enabled = isOnAR; 
         }
+
+        imageUI.SetActive(isOnAR);
+
+    }
+
+    public void debugController()
+    {
+        var triggerAreas = GameObject.FindGameObjectsWithTag("TriggerArea"); 
+
+        if (isOnDebug)
+        {
+            isOnDebug = false;
+        }
+        else
+        {
+            isOnDebug = true;
+        }
+
+        foreach (var triggerArea in triggerAreas)
+        {
+            triggerArea.GetComponent<Renderer>().enabled = isOnDebug;
+        }
+
     }
 }
