@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-
+//This script controlls the volume.
 public class VolumeControl : MonoBehaviour
 {
 

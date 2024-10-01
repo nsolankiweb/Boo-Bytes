@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia; 
 
+//This script is the visablity controllers. 
 public class CameraControl : MonoBehaviour
 {
     bool isOnAR = true;
