@@ -1061,7 +1061,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1113,6 +1113,7 @@ GameObject:
   - component: {fileID: 183564639}
   - component: {fileID: 183564641}
   - component: {fileID: 183564642}
+  - component: {fileID: 183564643}
   m_Layer: 0
   m_Name: B2
   m_TagString: MazeFalse
@@ -1223,6 +1224,33 @@ MonoBehaviour:
   nextTile: {fileID: 1852844827}
   inncorrect: {fileID: 1145988833}
   correct: {fileID: 1344648029}
+--- !u!54 &183564643
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183564636}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &217101280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,7 +1796,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -3010,6 +3038,7 @@ GameObject:
   - component: {fileID: 457906938}
   - component: {fileID: 457906940}
   - component: {fileID: 457906941}
+  - component: {fileID: 457906942}
   m_Layer: 0
   m_Name: B4
   m_TagString: MazeFalse
@@ -3117,6 +3146,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inncorrect: {fileID: 1145988833}
+--- !u!54 &457906942
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457906935}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &461428019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4268,7 +4324,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -6290,6 +6346,7 @@ GameObject:
   - component: {fileID: 961314190}
   - component: {fileID: 961314192}
   - component: {fileID: 961314193}
+  - component: {fileID: 961314194}
   m_Layer: 0
   m_Name: A1
   m_TagString: MazeFalse
@@ -6400,6 +6457,33 @@ MonoBehaviour:
   nextTile: {fileID: 1857674391}
   inncorrect: {fileID: 1145988833}
   correct: {fileID: 1344648029}
+--- !u!54 &961314194
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961314187}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &980116124
 GameObject:
   m_ObjectHideFlags: 0
@@ -7318,7 +7402,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -8547,6 +8631,7 @@ GameObject:
   - component: {fileID: 1348759269}
   - component: {fileID: 1348759271}
   - component: {fileID: 1348759272}
+  - component: {fileID: 1348759273}
   m_Layer: 0
   m_Name: A4
   m_TagString: MazeFalse
@@ -8654,6 +8739,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inncorrect: {fileID: 1145988833}
+--- !u!54 &1348759273
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348759266}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1358993531
 GameObject:
   m_ObjectHideFlags: 0
@@ -8813,6 +8925,7 @@ GameObject:
   - component: {fileID: 1377526487}
   - component: {fileID: 1377526489}
   - component: {fileID: 1377526490}
+  - component: {fileID: 1377526491}
   m_Layer: 0
   m_Name: C4
   m_TagString: MazeFalse
@@ -8923,6 +9036,33 @@ MonoBehaviour:
   nextTile: {fileID: 834560085}
   inncorrect: {fileID: 1145988833}
   correct: {fileID: 1344648029}
+--- !u!54 &1377526491
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377526484}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1403126734
 GameObject:
   m_ObjectHideFlags: 0
@@ -10130,6 +10270,7 @@ GameObject:
   - component: {fileID: 1551810446}
   - component: {fileID: 1551810448}
   - component: {fileID: 1551810449}
+  - component: {fileID: 1551810450}
   m_Layer: 0
   m_Name: C1
   m_TagString: MazeFalse
@@ -10237,6 +10378,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inncorrect: {fileID: 1145988833}
+--- !u!54 &1551810450
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551810443}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1582471801
 GameObject:
   m_ObjectHideFlags: 0
@@ -10958,7 +11126,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -11249,6 +11417,7 @@ GameObject:
   - component: {fileID: 1659336055}
   - component: {fileID: 1659336057}
   - component: {fileID: 1659336058}
+  - component: {fileID: 1659336059}
   m_Layer: 0
   m_Name: C3
   m_TagString: MazeFalse
@@ -11359,6 +11528,33 @@ MonoBehaviour:
   nextTile: {fileID: 1377526484}
   inncorrect: {fileID: 1145988833}
   correct: {fileID: 1344648029}
+--- !u!54 &1659336059
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659336052}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1672307940
 GameObject:
   m_ObjectHideFlags: 0
@@ -12293,6 +12489,7 @@ GameObject:
   - component: {fileID: 1721437147}
   - component: {fileID: 1721437149}
   - component: {fileID: 1721437150}
+  - component: {fileID: 1721437151}
   m_Layer: 0
   m_Name: B3
   m_TagString: MazeFalse
@@ -12403,6 +12600,33 @@ MonoBehaviour:
   nextTile: {fileID: 1659336052}
   inncorrect: {fileID: 1145988833}
   correct: {fileID: 1344648029}
+--- !u!54 &1721437151
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721437144}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1746801931
 GameObject:
   m_ObjectHideFlags: 0
@@ -12702,6 +12926,7 @@ GameObject:
   - component: {fileID: 1852844830}
   - component: {fileID: 1852844832}
   - component: {fileID: 1852844833}
+  - component: {fileID: 1852844834}
   m_Layer: 0
   m_Name: A2
   m_TagString: MazeFalse
@@ -12812,6 +13037,33 @@ MonoBehaviour:
   nextTile: {fileID: 2009882020}
   inncorrect: {fileID: 1145988833}
   correct: {fileID: 1344648029}
+--- !u!54 &1852844834
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852844827}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1857674391
 GameObject:
   m_ObjectHideFlags: 0
@@ -12825,6 +13077,7 @@ GameObject:
   - component: {fileID: 1857674394}
   - component: {fileID: 1857674396}
   - component: {fileID: 1857674397}
+  - component: {fileID: 1857674398}
   m_Layer: 0
   m_Name: B1
   m_TagString: MazeFalse
@@ -12935,6 +13188,33 @@ MonoBehaviour:
   nextTile: {fileID: 183564636}
   inncorrect: {fileID: 1145988833}
   correct: {fileID: 1344648029}
+--- !u!54 &1857674398
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857674391}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1872196873
 GameObject:
   m_ObjectHideFlags: 0
@@ -12948,6 +13228,7 @@ GameObject:
   - component: {fileID: 1872196876}
   - component: {fileID: 1872196878}
   - component: {fileID: 1872196879}
+  - component: {fileID: 1872196880}
   m_Layer: 0
   m_Name: C2
   m_TagString: MazeFalse
@@ -13055,6 +13336,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inncorrect: {fileID: 1145988833}
+--- !u!54 &1872196880
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872196873}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1895325491
 GameObject:
   m_ObjectHideFlags: 0
@@ -14268,6 +14576,7 @@ GameObject:
   - component: {fileID: 2009882025}
   - component: {fileID: 2009882027}
   - component: {fileID: 2009882026}
+  - component: {fileID: 2009882028}
   m_Layer: 0
   m_Name: A3
   m_TagString: MazeFalse
@@ -14394,6 +14703,33 @@ MonoBehaviour:
   nextTile: {fileID: 1721437144}
   inncorrect: {fileID: 1145988833}
   correct: {fileID: 1344648029}
+--- !u!54 &2009882028
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009882020}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2011497543
 GameObject:
   m_ObjectHideFlags: 0

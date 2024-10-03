@@ -31,6 +31,7 @@ public class ClueOneInteraction : MonoBehaviour
     void Start()
     {
         clue.SetActive(false); 
+        virusArea.SetActive(false);
     }
 
     // Update is called once per frame
@@ -100,6 +101,7 @@ public class ClueOneInteraction : MonoBehaviour
     {
         clue.SetActive(true);
         virusArea.SetActive(true);
+        virusArea.GetComponent<Renderer>().enabled = true;
 
     }
 
