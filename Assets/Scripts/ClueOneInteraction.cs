@@ -8,10 +8,8 @@ public class ClueOneInteraction : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject monster;
+    GameObject clue;
 
-    [SerializeField]
-    GameObject clueText;
 
     [SerializeField]
     GameObject cube1;
@@ -19,29 +17,26 @@ public class ClueOneInteraction : MonoBehaviour
     GameObject cube2;
     [SerializeField]
     GameObject cube3;
-    [SerializeField]
-    AudioSource sfx;
 
+    [SerializeField]
+    GameObject virusArea;
 
     // Start is called before the first frame update
-    bool cube1s = false; 
-    bool cube2s = false;
-    bool cube3s = false;
     string hitName;
+
+    bool marker1 = false; 
+    bool marker2 = false;
+    bool marker3 = false;   
 
     void Start()
     {
-        monster.SetActive(false);
-        clueText.SetActive(false); 
-        sfx.enabled = true;
-
-
+        clue.SetActive(false); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit Hit;
@@ -53,22 +48,41 @@ public class ClueOneInteraction : MonoBehaviour
                 switch (hitName)
                 {
                     case "Cube01":
-                        cube1s = true;
                         cube1.SetActive(false);
-                        sfx.Play();
+                        if (marker2 ||  marker3)
+                        {
+                            Incorrect(); 
+
+                        } else
+                        {
+                            marker1 = true;
+                        }
                         break;
 
                     case "Cube02":
-                        cube2s = true;
                         cube2.SetActive(false);
-                        sfx.Play();
+                        if (marker1 && marker3)
+                        {
+                            marker2 = true;
+                        }
+                        else
+                        {
+                            Incorrect(); 
+                        }
                         break;
 
                     case "Cube03":
-                        cube3s = true;
                         cube3.SetActive(false);
-                        sfx.Play();
+                        if (marker1 == true && marker2 == false)
+                        {
+                            marker3 = true;
+
+                        } else
+                        {
+                            Incorrect();
+                        }
                         break;
+
                     default:
                         break;
                 }
@@ -76,7 +90,7 @@ public class ClueOneInteraction : MonoBehaviour
 
         }
 
-        if (cube1s && cube2s && cube3s)
+        if (marker1 && marker2 && marker3)
         {
             DisplayClue(); 
         }
@@ -84,8 +98,20 @@ public class ClueOneInteraction : MonoBehaviour
 
     void DisplayClue()
     {
-        monster.SetActive(true);
-        clueText.SetActive(true);
+        clue.SetActive(true);
+        virusArea.SetActive(true);
+
+    }
+
+    void Incorrect()
+    {
+        cube1.SetActive(true);
+        cube2.SetActive(true);
+        cube3.SetActive(true);
+
+        marker1 = false;    
+        marker2 = false;
+        marker3 = false;
 
     }
 }

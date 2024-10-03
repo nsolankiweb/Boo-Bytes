@@ -46,7 +46,7 @@ public class CameraControl : MonoBehaviour
 
     }
 
-    public void debugController()
+    public void DebugController()
     {
         var triggerAreas = GameObject.FindGameObjectsWithTag("TriggerArea"); 
 
