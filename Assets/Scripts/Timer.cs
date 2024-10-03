@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
 
     public float remainingTime = 600; 
 
+
     void Start()
     {
         time.text = "00:00";
@@ -19,7 +20,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (remainingTime > 0.9)
+        if (remainingTime > 0.9 && time.enabled == true)
         {
             remainingTime -= Time.deltaTime;
 

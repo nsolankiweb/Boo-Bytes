@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI; 
 //This script is for catching the virus. 
 
 public class VirusCatching : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject Virus1;
+    [SerializeField] private Image v1;
+    [SerializeField] private Image v2;
+    [SerializeField] private Image v3;
+    [SerializeField] private Image v4;
+    [SerializeField] private Image v5;
 
+    [SerializeField] private GameObject Virus1;
     private bool v1caught = false;
 
-    [SerializeField]
-    private GameObject FinalVirus;
+    [SerializeField] private GameObject FinalVirus;
+
     [SerializeField] private Canvas winning; 
 
     [SerializeField]
@@ -42,11 +46,13 @@ public class VirusCatching : MonoBehaviour
                 {
                     case "Virus1":
                         v1caught = true; 
+                        v1.enabled = true;
                         Virus1.SetActive(false);
                         break;
 
                     case "FinalVirus":
                         FinalVirus.SetActive(false);
+                        v5.enabled = true;
                         winning.enabled = true; 
                         break;
 
