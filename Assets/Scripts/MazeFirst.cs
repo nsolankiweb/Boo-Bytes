@@ -2,40 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MazeCorrect : MonoBehaviour
+public class MazeFirst : MonoBehaviour
 {
-    [SerializeField] private GameObject previousTile; 
     [SerializeField] private GameObject nextTile;
-    [SerializeField] private Canvas inncorrect; 
+    [SerializeField] private Canvas inncorrect;
     [SerializeField] private Canvas correct;
 
-    bool hit = false; 
+    bool hit = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.gameObject.CompareTag("MazeTrue"))
+        if (transform.gameObject.CompareTag("MazeTrue"))
         {
-            hit = true; 
+            hit = true;
         }
         else
         {
-            hit = false; 
+            hit = false;
         }
     }
 
     private void OnTriggerEnter(Collider other)
-    {   
-        if(!hit)
+    {
+        if (!hit)
         {
-            Debug.Log("Correct hit");
-            if (previousTile.CompareTag("MazeTrue") && nextTile.CompareTag("MazeFalse"))
+            Debug.Log("First hit");
+            if (nextTile.CompareTag("MazeFalse"))
             {
                 transform.gameObject.tag = "MazeTrue";
                 correct.enabled = true;
@@ -46,7 +45,7 @@ public class MazeCorrect : MonoBehaviour
                 inncorrect.enabled = true;
             }
         }
-        
+
     }
 
 }

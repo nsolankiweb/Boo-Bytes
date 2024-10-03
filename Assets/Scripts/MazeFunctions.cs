@@ -48,6 +48,7 @@ public class MazeFunctions : MonoBehaviour
             C3.CompareTag("MazeTrue") && C4.CompareTag("MazeTrue"))
         {
             mainVirus.SetActive(true);
+            mainVirus.GetComponent<Renderer>().enabled = true;
             transform.gameObject.SetActive(false);
         }
 
@@ -64,7 +65,7 @@ public class MazeFunctions : MonoBehaviour
     }
 
     public void ResetMaze()
-    {
+    {   
         notcorrect.enabled = false;
 
         inncorrect++;

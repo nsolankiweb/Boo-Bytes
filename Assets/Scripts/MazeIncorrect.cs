@@ -22,6 +22,7 @@ public class MazeIncorrect : MonoBehaviour
     {
         
         inncorrect.enabled = true;
+        Debug.Log("Incorrect hit");
         
     }
 }
