@@ -29,10 +29,19 @@ public class CameraControl : MonoBehaviour
     [SerializeField]
     private Button debugButton;
 
+    [SerializeField]
+    private GameObject arElements; 
+
 
     void Start()
     {
         arCamera = GetComponent<VuforiaBehaviour>();
+        var triggerAreas = GameObject.FindGameObjectsWithTag("TriggerArea");
+        foreach (var triggerArea in triggerAreas)
+        {
+            triggerArea.GetComponent<Renderer>().enabled = false;
+        }
+
     }
 
     void Update()
@@ -42,7 +51,7 @@ public class CameraControl : MonoBehaviour
 
     public void ARCameraController()
     {
-        var imageTargets = FindObjectsOfType<ImageTargetBehaviour>();
+        
 
         if (isOnAR)
         {
@@ -55,10 +64,7 @@ public class CameraControl : MonoBehaviour
             arButton.GetComponent<UnityEngine.UI.Image>().sprite = vision;
         }
 
-        foreach (var imageTarget in imageTargets)
-        {
-            imageTarget.enabled = isOnAR;
-        }
+        arElements.SetActive(isOnAR);
 
 
     }
