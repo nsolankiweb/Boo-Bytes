@@ -27,7 +27,8 @@ public class VirusCatching : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Maze.SetActive(false);
+        Maze.SetActive(true);
+
     }
 
     // Update is called once per frame
@@ -41,6 +42,7 @@ public class VirusCatching : MonoBehaviour
             if (Physics.Raycast(ray, out Hit))
             {
                 hitName = Hit.transform.name;
+
 
                 switch (hitName)
                 {
