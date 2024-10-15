@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainARGame.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Scenes/LavaScene.unity
+    guid: ebb960bdf9f7efb4c9a7e696dcfaaae1
   m_configObjects: {}

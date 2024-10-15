@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//This is the puzzle 1 script. 
+//This is the puzzle 2 script. 
 
-public class ClueOneInteraction : MonoBehaviour
+public class GlyphInteraction : MonoBehaviour
 {
 
     [SerializeField]
@@ -17,6 +17,8 @@ public class ClueOneInteraction : MonoBehaviour
     private GameObject cube2;
     [SerializeField]
     private GameObject cube3;
+    [SerializeField]
+    private GameObject cube4;
 
     [SerializeField]
     private GameObject virusArea;
@@ -26,17 +28,24 @@ public class ClueOneInteraction : MonoBehaviour
     private bool marker1 = false;
     private bool marker2 = false;
     private bool marker3 = false;
+    private bool marker4 = false;
 
     void Start()
     {
         clue.SetActive(false); 
         virusArea.SetActive(false);
+        cube1.SetActive(false);
+        cube2.SetActive(false);
+        cube3.SetActive(false);
+        cube4.SetActive(false);
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit Hit;
@@ -47,9 +56,9 @@ public class ClueOneInteraction : MonoBehaviour
 
                 switch (hitName)
                 {
-                    case "Cube01":
-                        cube1.SetActive(false);
-                        if (marker2 ||  marker3)
+                    case "Cylinder1":
+                        cube1.SetActive(true);
+                        if (marker2 ||  marker3 || marker4)
                         {
                             Incorrect(); 
 
@@ -59,9 +68,9 @@ public class ClueOneInteraction : MonoBehaviour
                         }
                         break;
 
-                    case "Cube02":
-                        cube2.SetActive(false);
-                        if (marker1 && marker3)
+                    case "Cylinder2":
+                        cube2.SetActive(true);
+                        if (marker1 && marker3 == false && marker4 == false)
                         {
                             marker2 = true;
                         }
@@ -71,13 +80,26 @@ public class ClueOneInteraction : MonoBehaviour
                         }
                         break;
 
-                    case "Cube03":
-                        cube3.SetActive(false);
-                        if (marker1 == true && marker2 == false)
+                    case "Cylinder3":
+                        cube3.SetActive(true);
+                        if (marker1 && marker2 && marker3 == false)
                         {
                             marker3 = true;
 
                         } else
+                        {
+                            Incorrect();
+                        }
+                        break;
+
+                    case "Cylinder4":
+                        cube4.SetActive(true);
+                        if (marker1 && marker2 && marker3)
+                        {
+                            marker4 = true;
+
+                        }
+                        else
                         {
                             Incorrect();
                         }
@@ -90,13 +112,13 @@ public class ClueOneInteraction : MonoBehaviour
 
         }
 
-        if (marker1 && marker2 && marker3)
+        if (marker1 && marker2 && marker3 && marker4)
         {
-            DisplayClue(); 
+            DisplayClue();
         }
     }
 
-    void DisplayClue()
+    private void DisplayClue()
     {
         clue.SetActive(true);
         virusArea.SetActive(true);
@@ -104,15 +126,17 @@ public class ClueOneInteraction : MonoBehaviour
 
     }
 
-    void Incorrect()
+    private void Incorrect()
     {
-        cube1.SetActive(true);
-        cube2.SetActive(true);
-        cube3.SetActive(true);
+        cube1.SetActive(false);
+        cube2.SetActive(false);
+        cube3.SetActive(false);
+        cube4.SetActive(false);
 
         marker1 = false;    
         marker2 = false;
         marker3 = false;
+        marker4 = false;
 
     }
 }

@@ -13,9 +13,19 @@ public class VirusCatching : MonoBehaviour
     [SerializeField] private Image v5;
 
     [SerializeField] private GameObject Virus1;
+    [SerializeField] private GameObject Virus1Area;
     private bool v1caught = false;
 
+    [SerializeField] private GameObject Virus2;
+    [SerializeField] private GameObject Virus2Area;
+    private bool v2caught = false;
+
+    [SerializeField] private GameObject Virus3;
+    [SerializeField] private GameObject Virus3Area;
+    private bool v3caught = false;
+
     [SerializeField] private GameObject FinalVirus;
+    [SerializeField] private GameObject FinalVirusArea;
 
     [SerializeField] private Canvas winning; 
 
@@ -27,45 +37,82 @@ public class VirusCatching : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Maze.SetActive(true);
+        Maze.SetActive(false);
+
+        v1.enabled = false;
+        v2.enabled = false;
+        v3.enabled = false;
+        v4.enabled = false;
+        v5.enabled = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
+        //if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        //{
+        //    Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+        //    RaycastHit Hit;
+
+        //    if (Physics.Raycast(ray, out Hit))
+        //    {
+        //        hitName = Hit.transform.name;
+
+
+        //        switch (hitName)
+        //        {
+        //            case "Virus1Model":
+        //                v1caught = true; 
+        //                v1.enabled = true;
+        //                Virus1.SetActive(false);
+        //                break;
+
+        //            case "FinalVirusModel":
+        //                FinalVirus.SetActive(false);
+        //                v5.enabled = true;
+        //                winning.enabled = true; 
+        //                break;
+
+        //            default:
+        //                break;
+        //        }
+        //    }
+
+        //}
+
+        if(Virus1.CompareTag("Caught"))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-            RaycastHit Hit;
-
-            if (Physics.Raycast(ray, out Hit))
-            {
-                hitName = Hit.transform.name;
-
-
-                switch (hitName)
-                {
-                    case "Virus1":
-                        v1caught = true; 
-                        v1.enabled = true;
-                        Virus1.SetActive(false);
-                        break;
-
-                    case "FinalVirus":
-                        FinalVirus.SetActive(false);
-                        v5.enabled = true;
-                        winning.enabled = true; 
-                        break;
-
-                    default:
-                        break;
-                }
-            }
+            v1caught = true;
+            v1.enabled = true;
+            Virus1.SetActive(false);
 
         }
 
-        if(v1caught)
+        if (Virus2.CompareTag("Caught"))
+        {
+            v2caught = true;
+            v2.enabled = true;
+            Virus2.SetActive(false);
+
+        }
+
+        if (Virus3.CompareTag("Caught"))
+        {
+            v3caught = true;
+            v3.enabled = true;
+            Virus3.SetActive(false);
+
+        }
+
+        if (FinalVirus.CompareTag("Caught"))
+        {
+            FinalVirus.SetActive(false);
+            v5.enabled = true;
+            winning.enabled = true;
+        }
+
+        if (v1caught && v2caught && v3caught)
         {
             Maze.SetActive(true); 
         }
