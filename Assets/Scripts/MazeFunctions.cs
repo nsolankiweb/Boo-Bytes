@@ -64,6 +64,7 @@ public class MazeFunctions : MonoBehaviour
         }
     }
 
+    //no edit
     public void ResetMaze()
     {   
         notcorrect.enabled = false;
@@ -83,6 +84,7 @@ public class MazeFunctions : MonoBehaviour
          
     }
 
+    //no edit
     public void ContinueMaze()
     {
         correct.enabled = false;
