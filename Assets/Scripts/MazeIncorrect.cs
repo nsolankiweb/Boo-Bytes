@@ -9,7 +9,7 @@ public class MazeIncorrect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        //sound here
         inncorrect.enabled = true;
         Debug.Log("Incorrect hit");
         

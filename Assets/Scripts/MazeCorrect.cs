@@ -33,11 +33,13 @@ public class MazeCorrect : MonoBehaviour
             if (previousTile.CompareTag("MazeTrue") && nextTile.CompareTag("MazeFalse"))
             {
                 transform.gameObject.tag = "MazeTrue";
+                //sound 
                 correct.enabled = true;
 
             }
             else
-            {
+            {   
+                //sound
                 inncorrect.enabled = true;
             }
         }
