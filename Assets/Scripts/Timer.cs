@@ -9,12 +9,19 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI time;
 
+    [SerializeField]
+    private Canvas TimeOut;
+
+    [SerializeField]
+    private GameObject ARE; 
+
     public float remainingTime = 600; 
 
 
     void Start()
     {
         time.text = "00:00";
+        TimeOut.enabled = false;
     }
 
 
@@ -29,6 +36,12 @@ public class Timer : MonoBehaviour
             float seconds = Mathf.FloorToInt(remainingTime % 60);
 
             time.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+
+        if (remainingTime <= 0.9)
+        {
+            TimeOut.enabled = true;
+            ARE.SetActive(false);
         }
 
     }
