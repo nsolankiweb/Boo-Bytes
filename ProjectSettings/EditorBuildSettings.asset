@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainARGame.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/Scenes/LavaScene.unity
     guid: ebb960bdf9f7efb4c9a7e696dcfaaae1
+  - enabled: 1
+    path: Assets/Scenes/TestGame.unity
+    guid: 5c5dfbfaa69a60c4c9b6e5648b9281ef
   m_configObjects: {}

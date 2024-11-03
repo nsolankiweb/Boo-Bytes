@@ -7,7 +7,8 @@ using UnityEngine;
 public class VirusTriggerArea : MonoBehaviour
 {   
     //if you have more objects add more. 
-    [SerializeField] GameObject Virus; 
+    [SerializeField] GameObject Virus;
+    [SerializeField] GameObject MinionSFX;
 
     void Start()
     {
@@ -15,12 +16,14 @@ public class VirusTriggerArea : MonoBehaviour
 
         //if you have more objects. Set them to false/ 
         Virus.SetActive(false);
+
     }
 
     private void OnTriggerEnter(Collider other)
     {   
         //if you have more objects set them to true. 
-        Virus.SetActive(true); 
+        Virus.SetActive(true);
+        MinionSFX.SetActive(true);
     }
 
 
