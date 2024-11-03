@@ -19,6 +19,14 @@ public class ClueOneInteraction : MonoBehaviour
     private GameObject cube3;
 
     [SerializeField]
+    private AudioSource ErrorSFX;
+    public GameObject audioObjectError;
+
+    [SerializeField]
+    private AudioSource CorrectSFX;
+    public GameObject audioObjectCorrect;
+
+    [SerializeField]
     private GameObject virusArea;
 
     private string hitName;
@@ -31,6 +39,8 @@ public class ClueOneInteraction : MonoBehaviour
     {
         clue.SetActive(false); 
         virusArea.SetActive(false);
+        ErrorSFX = audioObjectError.GetComponent<AudioSource>();
+        CorrectSFX = audioObjectCorrect.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,6 +66,7 @@ public class ClueOneInteraction : MonoBehaviour
                         } else
                         {
                             marker1 = true;
+                            CorrectSFX.Play();
                         }
                         break;
 
@@ -64,6 +75,7 @@ public class ClueOneInteraction : MonoBehaviour
                         if (marker1 && marker3)
                         {
                             marker2 = true;
+                            CorrectSFX.Play();
                         }
                         else
                         {
@@ -76,6 +88,7 @@ public class ClueOneInteraction : MonoBehaviour
                         if (marker1 == true && marker2 == false)
                         {
                             marker3 = true;
+                            CorrectSFX.Play();
 
                         } else
                         {
@@ -106,6 +119,7 @@ public class ClueOneInteraction : MonoBehaviour
 
     void Incorrect()
     {
+        ErrorSFX.Play();
         cube1.SetActive(true);
         cube2.SetActive(true);
         cube3.SetActive(true);
