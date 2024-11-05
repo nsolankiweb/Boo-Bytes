@@ -12451,7 +12451,7 @@ Transform:
   m_GameObject: {fileID: 1017241630}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.99, y: -1.066, z: -16.016}
+  m_LocalPosition: {x: 6.76, y: -1.066, z: -27.83}
   m_LocalScale: {x: 0.2725175, y: 0.2725175, z: 0.2725175}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25864,7 +25864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clue: {fileID: 767702392}
   fail: {fileID: 699603563}
-  virusArea: {fileID: 0}
+  virusArea: {fileID: 1706960976}
   pit: {fileID: 1005232358}
 --- !u!114 &1920826688
 MonoBehaviour:
