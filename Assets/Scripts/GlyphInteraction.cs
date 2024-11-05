@@ -20,16 +20,11 @@ public class GlyphInteraction : MonoBehaviour
     [SerializeField]
     private GameObject cube4;
 
-    [SerializeField]
-    private GameObject virusArea;
-
-    [SerializeField]
     private AudioSource ErrorSFX;
-    public GameObject audioObjectError;
+    [SerializeField] public GameObject audioObjectError;
 
-    [SerializeField]
     private AudioSource CorrectSFX;
-    public GameObject audioObjectCorrect;
+    [SerializeField] public GameObject audioObjectCorrect;
 
     private string hitName;
 
@@ -41,7 +36,6 @@ public class GlyphInteraction : MonoBehaviour
     void Start()
     {
         clue.SetActive(false); 
-        virusArea.SetActive(false);
         cube1.SetActive(false);
         cube2.SetActive(false);
         cube3.SetActive(false);
@@ -134,8 +128,7 @@ public class GlyphInteraction : MonoBehaviour
     private void DisplayClue()
     {
         clue.SetActive(true);
-        virusArea.SetActive(true);
-        virusArea.GetComponent<Renderer>().enabled = true;
+        this.gameObject.tag = "Solved"; 
 
     }
 
