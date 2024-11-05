@@ -8,7 +8,8 @@ public class GlyphPlacement : MonoBehaviour
    
     [SerializeField] private GameObject glyph;
     [SerializeField] private GameObject stage;
-    [SerializeField] private AudioSource sfx; 
+    [SerializeField] private GameObject sfxSource; 
+    private AudioSource sfx; 
 
     private int nameCount = 0;
 
@@ -27,6 +28,7 @@ public class GlyphPlacement : MonoBehaviour
     void Start()
     {
         virusArea.SetActive(false);
+        sfx = sfxSource.GetComponent<AudioSource>();
 
     }
 
