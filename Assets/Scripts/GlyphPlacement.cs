@@ -79,14 +79,16 @@ public class GlyphPlacement : MonoBehaviour
     public void AnchorCreator(Transform worldPositioning)
     {
         Quaternion rotation = Quaternion.LookRotation(worldPositioning.forward, worldPositioning.up);
-        GameObject ObjectToAnchor = Instantiate(glyph, worldPositioning.position, Quaternion.Euler(worldPositioning.rotation.x, worldPositioning.rotation.y, worldPositioning.rotation.z));
-        //GameObject ObjectToAnchor = Instantiate(glyph, worldPositioning.position, rotation);
+        
+        //GameObject ObjectToAnchor = Instantiate(glyph, worldPositioning.position, Quaternion.Euler(worldPositioning.rotation.x, worldPositioning.rotation.y, worldPositioning.rotation.z));
+        GameObject ObjectToAnchor = Instantiate(glyph, worldPositioning.position, rotation);
 
         AnchorBehaviour myAnchor = ObjectToAnchor.AddComponent<AnchorBehaviour>();
-        myAnchor.ConfigureAnchor("Anchor"+nameCount.ToString(), worldPositioning.position, Quaternion.Euler(worldPositioning.rotation.x, worldPositioning.rotation.y, worldPositioning.rotation.z));
-        // myAnchor.ConfigureAnchor("Anchor"+nameCount.ToString(), worldPositioning.position, rotation);
+        //myAnchor.ConfigureAnchor("Anchor"+nameCount.ToString(), worldPositioning.position, Quaternion.Euler(worldPositioning.rotation.x, worldPositioning.rotation.y, worldPositioning.rotation.z));
+        myAnchor.ConfigureAnchor("Anchor"+nameCount.ToString(), worldPositioning.position, rotation);
 
-        ObjectToAnchor.transform.rotation = rotation; 
+       
+        //ObjectToAnchor.transform.rotation = Quaternion.Euler(0, worldPositioning.rotation.y, 0);
 
         nameCount++;
 
