@@ -23,6 +23,14 @@ public class GlyphInteraction : MonoBehaviour
     [SerializeField]
     private GameObject virusArea;
 
+    [SerializeField]
+    private AudioSource ErrorSFX;
+    public GameObject audioObjectError;
+
+    [SerializeField]
+    private AudioSource CorrectSFX;
+    public GameObject audioObjectCorrect;
+
     private string hitName;
 
     private bool marker1 = false;
@@ -38,6 +46,8 @@ public class GlyphInteraction : MonoBehaviour
         cube2.SetActive(false);
         cube3.SetActive(false);
         cube4.SetActive(false);
+        ErrorSFX = audioObjectError.GetComponent<AudioSource>();
+        CorrectSFX = audioObjectCorrect.GetComponent<AudioSource>();
 
 
     }
@@ -65,6 +75,7 @@ public class GlyphInteraction : MonoBehaviour
                         } else
                         {
                             marker1 = true;
+                            CorrectSFX.Play();
                         }
                         break;
 
@@ -73,6 +84,7 @@ public class GlyphInteraction : MonoBehaviour
                         if (marker1 && marker3 == false && marker4 == false)
                         {
                             marker2 = true;
+                            CorrectSFX.Play();
                         }
                         else
                         {
@@ -85,6 +97,7 @@ public class GlyphInteraction : MonoBehaviour
                         if (marker1 && marker2 && marker3 == false)
                         {
                             marker3 = true;
+                            CorrectSFX.Play();
 
                         } else
                         {
@@ -128,6 +141,7 @@ public class GlyphInteraction : MonoBehaviour
 
     private void Incorrect()
     {
+        ErrorSFX.Play();
         cube1.SetActive(false);
         cube2.SetActive(false);
         cube3.SetActive(false);
