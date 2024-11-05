@@ -58,7 +58,10 @@ public class GlyphPlacement : MonoBehaviour
                     break;
 
                 case (TouchPhase.Ended):
-                    sfx.Play();
+                    if(currentObj != null)
+                    {
+                        sfx.Play();
+                    }
                     break;
 
             }
