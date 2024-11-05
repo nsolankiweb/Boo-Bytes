@@ -5845,7 +5845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.4170628, y: -430.97006}
+  m_AnchoredPosition: {x: 7.4170628, y: -588}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483134854
@@ -6621,6 +6621,7 @@ GameObject:
   - component: {fileID: 526545642}
   - component: {fileID: 526545641}
   - component: {fileID: 526545645}
+  - component: {fileID: 526545646}
   m_Layer: 0
   m_Name: PitTriggerEnter
   m_TagString: Untagged
@@ -6754,6 +6755,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedObject: {fileID: 1192649810}
+--- !u!114 &526545646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526545639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d89af1a30f44a14299352b8960c2e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObject: {fileID: 495056861}
 --- !u!1 &563970577
 GameObject:
   m_ObjectHideFlags: 0
@@ -13842,7 +13856,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1017850389}
+      - m_Target: {fileID: 495056861}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -21230,7 +21244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1615145196
 Transform:
   m_ObjectHideFlags: 0
@@ -25394,8 +25408,8 @@ GameObject:
   - component: {fileID: 1898127979}
   - component: {fileID: 1898127978}
   - component: {fileID: 1898127982}
-  - component: {fileID: 1898127983}
   - component: {fileID: 1898127984}
+  - component: {fileID: 1898127983}
   m_Layer: 0
   m_Name: ImageTargetScreen
   m_TagString: Untagged
@@ -25607,9 +25621,7 @@ MonoBehaviour:
   cube1: {fileID: 1954662908}
   cube2: {fileID: 1675899627}
   cube3: {fileID: 1376469492}
-  ErrorSFX: {fileID: 388240403}
   audioObjectError: {fileID: 388240401}
-  CorrectSFX: {fileID: 1220747746}
   audioObjectCorrect: {fileID: 1220747744}
   virusArea: {fileID: 1615145195}
 --- !u!114 &1898127984

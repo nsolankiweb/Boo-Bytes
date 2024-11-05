@@ -18,13 +18,11 @@ public class ClueOneInteraction : MonoBehaviour
     [SerializeField]
     private GameObject cube3;
 
-    [SerializeField]
+    [SerializeField] public GameObject audioObjectError;
     private AudioSource ErrorSFX;
-    public GameObject audioObjectError;
 
-    [SerializeField]
+    [SerializeField] public GameObject audioObjectCorrect;
     private AudioSource CorrectSFX;
-    public GameObject audioObjectCorrect;
 
     [SerializeField]
     private GameObject virusArea;
