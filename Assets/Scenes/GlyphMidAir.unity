@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glyph: {fileID: 3625664429964213894}
   stage: {fileID: 1803518245}
-  sfx: {fileID: 0}
+  sfxSource: {fileID: 0}
   virusArea: {fileID: 2027936414}
 --- !u!1 &119284340
 GameObject:
@@ -1366,6 +1366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CaughtSFX: {fileID: 0}
+  CaughtUI: {fileID: 0}
 --- !u!65 &1332589132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3887,7 +3888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3846543877382808071
 GameObject:
   m_ObjectHideFlags: 0
@@ -5031,7 +5032,8 @@ MonoBehaviour:
   cube2: {fileID: 4445980075936978877}
   cube3: {fileID: 945409087415840608}
   cube4: {fileID: 4207573408200616849}
-  virusArea: {fileID: 2027936414}
+  audioObjectError: {fileID: 0}
+  audioObjectCorrect: {fileID: 0}
 --- !u!136 &8064147153674067547
 CapsuleCollider:
   m_ObjectHideFlags: 0
