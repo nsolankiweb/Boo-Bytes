@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<QCARInfo>
+    <TargetSet version="36.0" toolVersion="v7.1.0">
+        <ModelTarget name="luffy2" targetId="54cfdede2e2448b8b38c82353c097a74" version="14.0" toolVersion="v7.1.0" bbox="-0.018020 -0.000031 -0.016343 0.017845 0.063320 0.016151" trackingMode="scan" upVector="0.0 1.0 0.0" optimizeTrackingFor="default" realisticTextures="yes" />
+    </TargetSet>
+    <Assembly name="luffy2" assemblyId="7111928aa7354ab8a2bef6929999945d">
+        <Part name="luffy2" translation="0 0 0" rotation="AD: 0 0 1 0" />
+        <EntryPoint name="(none)" trained="yes" />
+    </Assembly>
+</QCARInfo>

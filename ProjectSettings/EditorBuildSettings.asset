@@ -14,10 +14,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestGame.unity
     guid: 5c5dfbfaa69a60c4c9b6e5648b9281ef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GlyphMidAir.unity
     guid: 5f7881c9e478b7c4ab98e4126b24e46e
   - enabled: 0
     path: Assets/Scenes/GlyphTest.unity
     guid: 4255fbbabe510a546a139daa207a84d1
+  - enabled: 1
+    path: Assets/Scenes/TestTracking.unity
+    guid: 14dd8db59cb35d4479089fdf7848b6b6
   m_configObjects: {}
