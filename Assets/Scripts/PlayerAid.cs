@@ -115,7 +115,7 @@ public class PlayerAid : MonoBehaviour
         
     }
 
-    voic 
+   
     void DeactivateAid()
     {
         GlyphInstructions.SetActive(false);
