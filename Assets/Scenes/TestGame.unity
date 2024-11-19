@@ -1496,13 +1496,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7e3a3df22c6ee0b4597253fe69c9dd07, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.895
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 184
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1657,7 +1657,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 726d718432cb693409477100d35afbe1, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1860,7 +1860,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bf2062668837190439e00effbab63346, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2216,7 +2216,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e93e4860d9687e54fa4fe570623d3159, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2782,7 +2782,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c630e993fd5b784da6e0d295a034275, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10335,7 +10335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &752585952
 Transform:
   m_ObjectHideFlags: 0
@@ -14286,7 +14286,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b070d251170bd7e46817a40849fff8f1, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -19148,12 +19148,12 @@ GameObject:
   - component: {fileID: 1381450953}
   - component: {fileID: 1381450954}
   m_Layer: 0
-  m_Name: CubesLocationSFX
+  m_Name: AidSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1381450953
 Transform:
   m_ObjectHideFlags: 0
@@ -19179,8 +19179,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e93e4860d9687e54fa4fe570623d3159, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 87112745caebb504797dc6e49efb3936, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -20150,7 +20150,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 16328e87712c53941b98f197055988f9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -21700,7 +21700,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c5bda53f0888c4a448e3b0951aaf5a7d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -23566,7 +23566,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8ec07525872def44da01cb492b73bc75, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -26428,7 +26428,7 @@ GameObject:
   - component: {fileID: 1796511644}
   - component: {fileID: 1796511647}
   - component: {fileID: 1796511646}
-  - component: {fileID: 1796511645}
+  - component: {fileID: 1796511648}
   m_Layer: 0
   m_Name: PunchGuyModelTarget
   m_TagString: Untagged
@@ -26455,24 +26455,6 @@ Transform:
   - {fileID: 1982474108}
   m_Father: {fileID: 1283305248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1796511645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1796511643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1621554113, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1796511647}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: luffy2
-  mDatasetName: Vuforia/luffy2.xml
-  mCastedBehaviour: {fileID: 1796511647}
-  mModelTargetPreview: {fileID: 0}
 --- !u!114 &1796511646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26513,10 +26495,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1381450954}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1381450954}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1796511647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26560,9 +26566,27 @@ MonoBehaviour:
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
   mHasRealisticTextures: 1
-  mPreview: {fileID: 1796511645}
+  mPreview: {fileID: 1796511648}
   mAutoValidationDataSetName: 
   mGuideViewDisplayModeNeedsUpgrade: 0
+--- !u!114 &1796511648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796511643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1621554113, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1796511647}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: luffy2
+  mDatasetName: Vuforia/luffy2.xml
+  mCastedBehaviour: {fileID: 1796511647}
+  mModelTargetPreview: {fileID: 0}
 --- !u!1 &1800362414
 GameObject:
   m_ObjectHideFlags: 0
@@ -29068,7 +29092,6 @@ MonoBehaviour:
   MazeLocation: {fileID: 139373230}
   CubesInstructions: {fileID: 1068918409}
   CubesLocation: {fileID: 146449317}
-  CubesLocationSFX: {fileID: 1381450952}
   MonstersInstructions: {fileID: 1527820094}
   Glyph: {fileID: 2109597194}
   Pit: {fileID: 1192649810}
@@ -29078,6 +29101,7 @@ MonoBehaviour:
   TriggerArea2: {fileID: 1580015855}
   TriggerArea3: {fileID: 1519329464}
   TriggerArea4: {fileID: 1693292669}
+  AidSound: {fileID: 1381450954}
 --- !u!1 &1987879434
 GameObject:
   m_ObjectHideFlags: 0
@@ -31008,7 +31032,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 93b60822679942e468013d0d2cfd1d60, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
