@@ -10,6 +10,8 @@ public class ClueOneInteraction : MonoBehaviour
     [SerializeField]
     private GameObject clue;
 
+    [SerializeField]
+    private GameObject cubes;
 
     [SerializeField]
     private GameObject cube1;
@@ -104,6 +106,7 @@ public class ClueOneInteraction : MonoBehaviour
         if (marker1 && marker2 && marker3)
         {
             DisplayClue(); 
+            cubes.SetActive(false);
         }
     }
 

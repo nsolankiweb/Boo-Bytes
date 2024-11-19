@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Vuforia; 
 
@@ -13,6 +14,7 @@ public class PlayerAid : MonoBehaviour
     [SerializeField] GameObject MazeLocation;
     [SerializeField] GameObject CubesInstructions;
     [SerializeField] GameObject CubesLocation;
+    [SerializeField] GameObject CubesLocationSFX;
     [SerializeField] GameObject MonstersInstructions;
 
 
@@ -31,69 +33,89 @@ public class PlayerAid : MonoBehaviour
     [SerializeField] GameObject TriggerArea3;
     [SerializeField] GameObject TriggerArea4;
 
+    GameObject Previous; 
+
     void Start()
     {
         DeactivateAid();
+        Previous = CubesLocation; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        DeactivateAid();
+     
 
-        if (Cubes.activeInHierarchy)
+        if (Cubes.activeInHierarchy && !CubesInstructions.activeInHierarchy)
         {
+            DeactivateAid(); 
             CubesInstructions.SetActive(true);
+            //CubesInstructions.GetComponent<AudioSource>().Play();
             CubesDone = true;
-
         }
-        else if (Glyph.activeInHierarchy)
+        else if (Glyph.activeInHierarchy && !GlyphInstructions.activeInHierarchy)
         {
-
+            DeactivateAid();
             GlyphInstructions.SetActive(true);
+            //GlyphInstructions.GetComponent<AudioSource>().Play();
             GlyphDone = true;
 
         }
-        else if (Pit.activeInHierarchy)
+        else if (Pit.activeInHierarchy && !PitInstructions.activeInHierarchy)
         {
+            DeactivateAid();
             PitInstructions.SetActive(true);
+            //PitInstructions.GetComponent<AudioSource>().Play();
             PitDone = true;
 
         }
-        else if (Maze.activeInHierarchy)
+        else if (Maze.activeInHierarchy && !MazeInstructions.activeInHierarchy)
         {
+            DeactivateAid();
             MazeInstructions.SetActive(true);
+            //MazeInstructions.GetComponent<AudioSource>().Play();
             MazeDone = true;
 
         }
-        else if (TriggerArea1.activeInHierarchy || TriggerArea2.activeInHierarchy || TriggerArea3.activeInHierarchy || TriggerArea4.activeInHierarchy)
+        else if (TriggerArea1.activeInHierarchy || TriggerArea2.activeInHierarchy || TriggerArea3.activeInHierarchy || TriggerArea4.activeInHierarchy && !MonstersInstructions.activeInHierarchy)
         {
+            DeactivateAid();
             MonstersInstructions.SetActive(true);
+            //MonstersInstructions.GetComponent<AudioSource>().Play();
 
         }
-        else if (!CubesDone)
+        else if (!CubesDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
         {
+            DeactivateAid();
             CubesLocation.SetActive(true);
+            //CubesLocation.GetComponent<AudioSource>().Play();
 
         }
-        else if (!GlyphDone)
+        else if (!GlyphDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
         {
+            DeactivateAid();
             GlyphLocation.SetActive(true);
+            //GlyphLocation.GetComponent<AudioSource>().Play();
         }
-        else if (!PitDone)
+        else if (!PitDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
         {
 
-            PitInstructions.SetActive(true);
+            DeactivateAid(); 
+            PitLocation.SetActive(true);
+            //PitInstructions.GetComponent <AudioSource>().Play();
 
         }
-        else if (!MazeDone)
+        else if (!MazeDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
         {
-            MazeInstructions.SetActive(true); 
+            DeactivateAid(); 
+            MazeLocation.SetActive(true); 
+            //MazeInstructions.GetComponent <AudioSource>().Play();
         }
 
         
     }
 
+    voic 
     void DeactivateAid()
     {
         GlyphInstructions.SetActive(false);
