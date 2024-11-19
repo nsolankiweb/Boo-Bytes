@@ -37,6 +37,7 @@ public class PlayerAid : MonoBehaviour
     void Start()
     {
         DeactivateAid();
+        Cubes.SetActive(false); 
     }
 
     // Update is called once per frame
