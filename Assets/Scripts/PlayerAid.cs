@@ -42,11 +42,11 @@ public class PlayerAid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+
 
         if (Cubes.activeInHierarchy && !CubesInstructions.activeInHierarchy)
         {
-            DeactivateAid(); 
+            DeactivateAid();
             CubesInstructions.SetActive(true);
             AidSound.clip = CubesInstructions.GetComponent<AudioSource>().clip;
             CubesDone = true;
@@ -82,35 +82,37 @@ public class PlayerAid : MonoBehaviour
             AidSound.clip = MonstersInstructions.GetComponent<AudioSource>().clip;
 
         }
-        else if (!CubesDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
+        else if (!Cubes.activeInHierarchy && !Glyph.activeInHierarchy && !Pit.activeInHierarchy && !Maze.activeInHierarchy) 
         {
-            DeactivateAid();
-            CubesLocation.SetActive(true);
-            AidSound.clip = CubesLocation.GetComponent<AudioSource>().clip;
+            if (!CubesDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
+            {
+                DeactivateAid();
+                CubesLocation.SetActive(true);
+                AidSound.clip = CubesLocation.GetComponent<AudioSource>().clip;
+
+            }
+            else if (!GlyphDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
+            {
+                DeactivateAid();
+                GlyphLocation.SetActive(true);
+                AidSound.clip = GlyphLocation.GetComponent<AudioSource>().clip;
+            }
+            else if (!PitDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
+            {
+
+                DeactivateAid();
+                PitLocation.SetActive(true);
+                AidSound.clip = PitInstructions.GetComponent<AudioSource>().clip;
+
+            }
+            else if (!MazeDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
+            {
+                DeactivateAid();
+                MazeLocation.SetActive(true);
+                AidSound.clip = MazeInstructions.GetComponent<AudioSource>().clip;
+            }
 
         }
-        else if (!GlyphDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
-        {
-            DeactivateAid();
-            GlyphLocation.SetActive(true);
-            AidSound.clip = GlyphLocation.GetComponent<AudioSource>().clip;
-        }
-        else if (!PitDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
-        {
-
-            DeactivateAid(); 
-            PitLocation.SetActive(true);
-            AidSound.clip = PitInstructions.GetComponent <AudioSource>().clip;
-
-        }
-        else if (!MazeDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
-        {
-            DeactivateAid(); 
-            MazeLocation.SetActive(true);
-            AidSound.clip = MazeInstructions.GetComponent <AudioSource>().clip;
-        }
-
-        
     }
 
    
