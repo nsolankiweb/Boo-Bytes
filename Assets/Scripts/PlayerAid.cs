@@ -85,32 +85,34 @@ public class PlayerAid : MonoBehaviour
         }
         else if (!Cubes.activeInHierarchy && !Glyph.activeInHierarchy && !Pit.activeInHierarchy && !Maze.activeInHierarchy) 
         {
-            if (!CubesDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
-            {
-                DeactivateAid();
-                CubesLocation.SetActive(true);
-                AidSound.clip = CubesLocation.GetComponent<AudioSource>().clip;
-
-            }
-            else if (!GlyphDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
+            
+            if (!GlyphDone)
             {
                 DeactivateAid();
                 GlyphLocation.SetActive(true);
                 AidSound.clip = GlyphLocation.GetComponent<AudioSource>().clip;
             }
-            else if (!PitDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
+            else if (!CubesDone)
+            {
+                DeactivateAid();
+                CubesLocation.SetActive(true);
+                AidSound.clip = CubesLocation.GetComponent<AudioSource>().clip;
+                //&& !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy
+
+            }
+            else if (!PitDone)
             {
 
                 DeactivateAid();
                 PitLocation.SetActive(true);
-                AidSound.clip = PitInstructions.GetComponent<AudioSource>().clip;
+                AidSound.clip = PitLocation.GetComponent<AudioSource>().clip;
 
             }
-            else if (!MazeDone && !CubesLocation.activeInHierarchy && !GlyphLocation.activeInHierarchy && !PitLocation.activeInHierarchy && !MazeLocation.activeInHierarchy)
+            else if (!MazeDone)
             {
                 DeactivateAid();
                 MazeLocation.SetActive(true);
-                AidSound.clip = MazeInstructions.GetComponent<AudioSource>().clip;
+                AidSound.clip = MazeLocation.GetComponent<AudioSource>().clip;
             }
 
         }

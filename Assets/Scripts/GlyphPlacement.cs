@@ -5,7 +5,10 @@ using Vuforia;
 
 public class GlyphPlacement : MonoBehaviour
 {
-   
+
+    [SerializeField]
+    private GameObject UI;
+
     [SerializeField] private GameObject glyph;
     [SerializeField] private GameObject stage;
     [SerializeField] private GameObject sfxSource; 
@@ -29,6 +32,8 @@ public class GlyphPlacement : MonoBehaviour
     {
         virusArea.SetActive(false);
         sfx = sfxSource.GetComponent<AudioSource>();
+        Debug.Log("GlYPH HIT");
+        UI.SetActive(false);
 
     }
 
@@ -71,7 +76,7 @@ public class GlyphPlacement : MonoBehaviour
         {
             virusArea.SetActive(true);
             virusArea.GetComponent<Renderer>().enabled = true;
-            
+            this.gameObject.SetActive(false);
         }
         
     }

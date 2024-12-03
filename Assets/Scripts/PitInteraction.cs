@@ -7,15 +7,18 @@ public class PitInteraction : MonoBehaviour
     private int numPlatforms = 0;
     private int platformsTouched = 0;
     [SerializeField] private GameObject clue;
-    [SerializeField] private GameObject fail;
+    //[SerializeField] private GameObject fail;
     [SerializeField] private GameObject virusArea;
     [SerializeField] private GameObject pit;
+    [SerializeField] private GameObject UI;
 
     void Start()
     {
         clue.SetActive(false);
-        fail.SetActive(false);   
+        //fail.SetActive(false);   
         virusArea.SetActive(false);
+        Debug.Log("PIT HIT");
+        UI.SetActive(false);
 
     }
 
@@ -41,10 +44,11 @@ public class PitInteraction : MonoBehaviour
                 virusArea.SetActive(true);
                 virusArea.GetComponent<Renderer>().enabled = true;
 
-            } else
-            {
-                fail.SetActive(true);
-            }
+            } 
+            //else
+            //{
+            //    fail.SetActive(true);
+            //}
 
             pit.SetActive(false);
         }

@@ -27,7 +27,10 @@ public class VirusCatching : MonoBehaviour
     [SerializeField] private GameObject FinalVirus;
     [SerializeField] private GameObject FinalVirusArea;
 
-    [SerializeField] private Canvas winning; 
+    [SerializeField] private Canvas winning;
+
+    [SerializeField] private GameObject sfxSource;
+    private AudioSource sfx;
 
     [SerializeField]
     private GameObject Maze; 
@@ -44,6 +47,8 @@ public class VirusCatching : MonoBehaviour
         v3.enabled = false;
         v4.enabled = false;
         v5.enabled = false;
+
+        sfx = sfxSource.GetComponent<AudioSource>();
 
     }
 
@@ -86,6 +91,8 @@ public class VirusCatching : MonoBehaviour
             v1caught = true;
             v1.enabled = true;
             Virus1.SetActive(false);
+            Virus1Area.SetActive(false);
+            sfx.Play();
 
         }
 
@@ -94,6 +101,7 @@ public class VirusCatching : MonoBehaviour
             v2caught = true;
             v2.enabled = true;
             Virus2.SetActive(false);
+            Virus2Area.SetActive(false);
 
         }
 
@@ -102,14 +110,18 @@ public class VirusCatching : MonoBehaviour
             v3caught = true;
             v3.enabled = true;
             Virus3.SetActive(false);
+            Virus3Area.SetActive(false);
+            sfx.Play();
 
         }
 
         if (FinalVirus.CompareTag("Caught"))
         {
             FinalVirus.SetActive(false);
-            v5.enabled = true;
+            v4.enabled = true;
             winning.enabled = true;
+            FinalVirusArea.SetActive(false);
+            sfx.Play();
         }
 
         if (v1caught && v2caught && v3caught)

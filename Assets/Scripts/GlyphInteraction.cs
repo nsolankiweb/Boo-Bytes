@@ -10,7 +10,6 @@ public class GlyphInteraction : MonoBehaviour
     [SerializeField]
     private GameObject clue;
 
-
     [SerializeField]
     private GameObject cube1;
     [SerializeField]

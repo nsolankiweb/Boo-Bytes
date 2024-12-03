@@ -13,7 +13,10 @@ public class GameStart : MonoBehaviour
     private TextMeshProUGUI timer;
 
     [SerializeField]
-    private GameObject intro; 
+    private GameObject intro;
+
+    [SerializeField] private GameObject UIG;
+    [SerializeField] private GameObject UIP; 
 
 
     // Start is called before the first frame update
@@ -22,6 +25,8 @@ public class GameStart : MonoBehaviour
         timer.enabled = false;
         clues.SetActive(false);
         intro.SetActive(true);
+        UIP.SetActive(false); 
+        UIG.SetActive(false);
     }
 
 
