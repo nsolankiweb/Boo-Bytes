@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LavaScene.unity
     guid: ebb960bdf9f7efb4c9a7e696dcfaaae1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestGame.unity
     guid: 5c5dfbfaa69a60c4c9b6e5648b9281ef
   - enabled: 0
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestTracking.unity
     guid: 14dd8db59cb35d4479089fdf7848b6b6
+  - enabled: 1
+    path: Assets/Scenes/TestGame 2.unity
+    guid: 1d01a1367eea1764aab3b24fd800a96c
   m_configObjects: {}
