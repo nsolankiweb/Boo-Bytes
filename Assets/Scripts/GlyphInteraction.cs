@@ -19,6 +19,10 @@ public class GlyphInteraction : MonoBehaviour
     [SerializeField]
     private GameObject cube4;
 
+    [SerializeField] private GameObject line1;
+    [SerializeField] private GameObject line2;
+    [SerializeField] private GameObject line3;
+
     private AudioSource ErrorSFX;
     [SerializeField] public GameObject audioObjectError;
 
@@ -39,6 +43,9 @@ public class GlyphInteraction : MonoBehaviour
         cube2.SetActive(false);
         cube3.SetActive(false);
         cube4.SetActive(false);
+        line1.SetActive(false);
+        line2.SetActive(false);
+        line3.SetActive(false);
         ErrorSFX = audioObjectError.GetComponent<AudioSource>();
         CorrectSFX = audioObjectCorrect.GetComponent<AudioSource>();
 
@@ -48,6 +55,7 @@ public class GlyphInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //(Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(0).phase == TouchPhase.Stationary || Input.GetTouch(0).phase == TouchPhase.Began)
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
@@ -59,8 +67,8 @@ public class GlyphInteraction : MonoBehaviour
 
                 switch (hitName)
                 {
-                    case "Cylinder1":
-                        cube1.SetActive(true);
+                    case "CY1":
+                        
                         if (marker2 ||  marker3 || marker4)
                         {
                             Incorrect(); 
@@ -68,16 +76,20 @@ public class GlyphInteraction : MonoBehaviour
                         } else
                         {
                             marker1 = true;
+                            cube1.SetActive(true);
                             CorrectSFX.Play();
                         }
                         break;
 
-                    case "Cylinder2":
-                        cube2.SetActive(true);
+                    case "CY2":
+                        
                         if (marker1 && marker3 == false && marker4 == false)
                         {
                             marker2 = true;
+                    
+                            cube2.SetActive(true);
                             CorrectSFX.Play();
+                            line1.SetActive(true);
                         }
                         else
                         {
@@ -85,12 +97,15 @@ public class GlyphInteraction : MonoBehaviour
                         }
                         break;
 
-                    case "Cylinder3":
-                        cube3.SetActive(true);
+                    case "CY3":
+                        
                         if (marker1 && marker2 && marker3 == false)
                         {
                             marker3 = true;
+                            
+                            cube3.SetActive(true);
                             CorrectSFX.Play();
+                            line2.SetActive(true);
 
                         } else
                         {
@@ -98,11 +113,15 @@ public class GlyphInteraction : MonoBehaviour
                         }
                         break;
 
-                    case "Cylinder4":
-                        cube4.SetActive(true);
+                    case "CY4":
+                       
                         if (marker1 && marker2 && marker3)
                         {
                             marker4 = true;
+                            
+                            cube4.SetActive(true);
+                            CorrectSFX.Play();
+                            line3.SetActive(true);
 
                         }
                         else
@@ -138,6 +157,9 @@ public class GlyphInteraction : MonoBehaviour
         cube2.SetActive(false);
         cube3.SetActive(false);
         cube4.SetActive(false);
+        //line1.SetActive(false);
+        //line2.SetActive(false);
+        //line3.SetActive(false); 
 
         marker1 = false;    
         marker2 = false;

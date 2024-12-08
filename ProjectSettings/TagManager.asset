@@ -12,6 +12,7 @@ TagManager:
   - Platform
   - PitExit
   - Solved
+  - PitFall
   layers:
   - Default
   - TransparentFX

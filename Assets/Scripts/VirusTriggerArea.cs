@@ -22,8 +22,11 @@ public class VirusTriggerArea : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {   
         //if you have more objects set them to true. 
-        Virus.SetActive(true);
-        MinionSFX.SetActive(true);
+        if (!Virus.CompareTag("Respawn"))
+        {
+            Virus.SetActive(true);
+            MinionSFX.SetActive(true);
+        }
     }
 
 

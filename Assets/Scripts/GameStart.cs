@@ -15,9 +15,12 @@ public class GameStart : MonoBehaviour
     [SerializeField]
     private GameObject intro;
 
-    [SerializeField] private GameObject UIG;
-    [SerializeField] private GameObject UIP; 
+    [SerializeField] private GameObject gameStart; 
 
+    [SerializeField] private GameObject UIG;
+    [SerializeField] private GameObject UIP;
+
+    private int hits = 0; 
 
     // Start is called before the first frame update
     void Start()
@@ -27,12 +30,22 @@ public class GameStart : MonoBehaviour
         intro.SetActive(true);
         UIP.SetActive(false); 
         UIG.SetActive(false);
+        gameStart.SetActive(false);
     }
 
 
     public void PosterFound()
     {
         clues.SetActive(true);
+        hits++; 
+        if (hits == 1)
+        {
+            gameStart.SetActive(true);
+        }
+    }
+
+    public void TimerStart()
+    {
         timer.enabled = true;
     }
 

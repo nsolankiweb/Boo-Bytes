@@ -8,10 +8,14 @@ public class MazeCorrect : MonoBehaviour
     [SerializeField] private GameObject nextTile;
     [SerializeField] private Canvas inncorrect; 
     [SerializeField] private Canvas correct;
+    [SerializeField] private GameObject sfxSource;
+    private AudioSource sfx; 
+    bool hit = false;
 
-    bool hit = false; 
-
-
+    private void Start()
+    {
+        sfx = sfxSource.GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -33,8 +37,8 @@ public class MazeCorrect : MonoBehaviour
             if (previousTile.CompareTag("MazeTrue") && nextTile.CompareTag("MazeFalse"))
             {
                 transform.gameObject.tag = "MazeTrue";
-                //sound 
-                correct.enabled = true;
+                sfx.Play(); 
+                //correct.enabled = true;
 
             }
             else

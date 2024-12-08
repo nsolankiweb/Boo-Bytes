@@ -91,7 +91,7 @@ public class VirusCatching : MonoBehaviour
             v1caught = true;
             v1.enabled = true;
             Virus1.SetActive(false);
-            Virus1Area.SetActive(false);
+            //Virus1Area.SetActive(false);
             sfx.Play();
 
         }
@@ -101,7 +101,7 @@ public class VirusCatching : MonoBehaviour
             v2caught = true;
             v2.enabled = true;
             Virus2.SetActive(false);
-            Virus2Area.SetActive(false);
+            //Virus2Area.SetActive(false);
 
         }
 
@@ -110,7 +110,7 @@ public class VirusCatching : MonoBehaviour
             v3caught = true;
             v3.enabled = true;
             Virus3.SetActive(false);
-            Virus3Area.SetActive(false);
+            //Virus3Area.SetActive(false);
             sfx.Play();
 
         }
@@ -124,7 +124,7 @@ public class VirusCatching : MonoBehaviour
             sfx.Play();
         }
 
-        if (v1caught && v2caught && v3caught)
+        if (Virus1Area.activeInHierarchy && Virus2Area.activeInHierarchy && Virus3Area.activeInHierarchy)
         {
             Maze.SetActive(true); 
         }

@@ -31,9 +31,10 @@ public class GlyphPlacement : MonoBehaviour
     void Start()
     {
         virusArea.SetActive(false);
+        stage.SetActive(false);
         sfx = sfxSource.GetComponent<AudioSource>();
         Debug.Log("GlYPH HIT");
-        UI.SetActive(false);
+        //UI.SetActive(false);
 
     }
 
@@ -84,6 +85,7 @@ public class GlyphPlacement : MonoBehaviour
     public void AnchorCreator(Transform worldPositioning)
     {
         Quaternion rotation = Quaternion.LookRotation(worldPositioning.forward, worldPositioning.up);
+        Vector3 post = new Vector3(worldPositioning.position.x, worldPositioning.position.y, worldPositioning.position.z + 0.1f);
         
         //GameObject ObjectToAnchor = Instantiate(glyph, worldPositioning.position, Quaternion.Euler(worldPositioning.rotation.x, worldPositioning.rotation.y, worldPositioning.rotation.z));
         GameObject ObjectToAnchor = Instantiate(glyph, worldPositioning.position, rotation);
