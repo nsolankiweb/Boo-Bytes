@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="letter" size="1.000000 1.294118" />
     <ImageTarget name="display01-01" size="1.000000 0.684845" />
     <ImageTarget name="poster01-01" size="1.000000 1.545455" />
     <ImageTarget name="volumeControl" size="1.000000 0.889648" />
