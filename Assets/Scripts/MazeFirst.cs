@@ -32,7 +32,7 @@ public class MazeFirst : MonoBehaviour
             if (nextTile.CompareTag("MazeFalse"))
             {
                 transform.gameObject.tag = "MazeTrue";
-                correct.enabled = true;
+                //correct.enabled = true;
 
             }
             else

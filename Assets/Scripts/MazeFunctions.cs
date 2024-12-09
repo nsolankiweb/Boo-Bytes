@@ -15,6 +15,10 @@ public class MazeFunctions : MonoBehaviour
     [SerializeField]
     private Canvas losing;
 
+    [SerializeField] GameObject holo; 
+
+    [SerializeField] private GameObject coffee;
+
     [SerializeField] private Canvas notcorrect;
     [SerializeField] private Canvas correct;
 
@@ -49,7 +53,9 @@ public class MazeFunctions : MonoBehaviour
         {
             mainVirus.SetActive(true);
             mainVirus.GetComponent<Renderer>().enabled = true;
+            holo.SetActive(false);
             transform.gameObject.SetActive(false);
+
         }
 
         
@@ -60,7 +66,9 @@ public class MazeFunctions : MonoBehaviour
         if (inncorrect == 3)
         {
             losing.enabled = true;
+            coffee.SetActive(true); 
             transform.gameObject.SetActive(false);
+             
         }
     }
 

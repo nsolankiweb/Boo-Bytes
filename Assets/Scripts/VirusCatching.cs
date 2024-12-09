@@ -10,7 +10,6 @@ public class VirusCatching : MonoBehaviour
     [SerializeField] private Image v2;
     [SerializeField] private Image v3;
     [SerializeField] private Image v4;
-    [SerializeField] private Image v5;
 
     [SerializeField] private GameObject Virus1;
     [SerializeField] private GameObject Virus1Area;
@@ -29,9 +28,6 @@ public class VirusCatching : MonoBehaviour
 
     [SerializeField] private Canvas winning;
 
-    [SerializeField] private GameObject sfxSource;
-    private AudioSource sfx;
-
     [SerializeField]
     private GameObject Maze; 
 
@@ -46,9 +42,6 @@ public class VirusCatching : MonoBehaviour
         v2.enabled = false;
         v3.enabled = false;
         v4.enabled = false;
-        v5.enabled = false;
-
-        sfx = sfxSource.GetComponent<AudioSource>();
 
     }
 
@@ -92,7 +85,7 @@ public class VirusCatching : MonoBehaviour
             v1.enabled = true;
             Virus1.SetActive(false);
             //Virus1Area.SetActive(false);
-            sfx.Play();
+       
 
         }
 
@@ -102,6 +95,7 @@ public class VirusCatching : MonoBehaviour
             v2.enabled = true;
             Virus2.SetActive(false);
             //Virus2Area.SetActive(false);
+       
 
         }
 
@@ -111,7 +105,7 @@ public class VirusCatching : MonoBehaviour
             v3.enabled = true;
             Virus3.SetActive(false);
             //Virus3Area.SetActive(false);
-            sfx.Play();
+      
 
         }
 
@@ -121,12 +115,17 @@ public class VirusCatching : MonoBehaviour
             v4.enabled = true;
             winning.enabled = true;
             FinalVirusArea.SetActive(false);
-            sfx.Play();
+          
         }
+
+        //if (v1caught && v2caught && v3caught)
+        //{
+        //    Maze.SetActive(true); 
+        //}
 
         if (Virus1Area.activeInHierarchy && Virus2Area.activeInHierarchy && Virus3Area.activeInHierarchy)
         {
-            Maze.SetActive(true); 
+            Maze.SetActive(true);
         }
     }
 }

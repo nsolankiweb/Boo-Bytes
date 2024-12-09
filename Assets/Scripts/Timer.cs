@@ -9,11 +9,16 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI time;
 
-    //[SerializeField]
-    //private Canvas TimeOut;
+    [SerializeField]
+    private Canvas TimeOut;
 
-    //[SerializeField]
-    //private GameObject ARE; 
+    [SerializeField] private Canvas Win;
+
+    [SerializeField]
+    private GameObject coffee;
+
+    [SerializeField]
+    private GameObject ARE;
 
     public float remainingTime = 600; 
 
@@ -38,10 +43,18 @@ public class Timer : MonoBehaviour
             time.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
 
-        if (remainingTime <= 0.9)
+        if (remainingTime <= 0.9 && time.enabled == true)
         {
-            //TimeOut.enabled = true;
-            //ARE.SetActive(false);
+            TimeOut.enabled = true;
+            coffee.SetActive(true);
+            ARE.SetActive(false);
+            time.enabled = false;
+
+        }
+
+        if(TimeOut.enabled == true || Win.enabled == true)
+        {
+            time.enabled = false;
         }
 
     }

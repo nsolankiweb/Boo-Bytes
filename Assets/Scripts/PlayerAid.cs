@@ -75,15 +75,7 @@ public class PlayerAid : MonoBehaviour
             AidSound.clip = MazeInstructions.GetComponent<AudioSource>().clip;
             MazeDone = true;
 
-        }
-        else if (TriggerArea1.activeInHierarchy || TriggerArea2.activeInHierarchy || TriggerArea3.activeInHierarchy || TriggerArea4.activeInHierarchy && !MonstersInstructions.activeInHierarchy)
-        {
-            DeactivateAid();
-            MonstersInstructions.SetActive(true);
-            AidSound.clip = MonstersInstructions.GetComponent<AudioSource>().clip;
-
-        }
-        else if (!Cubes.activeInHierarchy && !Glyph.activeInHierarchy && !Pit.activeInHierarchy && !Maze.activeInHierarchy) 
+        }else if (!Cubes.activeInHierarchy && !Glyph.activeInHierarchy && !Pit.activeInHierarchy && !Maze.activeInHierarchy) 
         {
             
             if (!GlyphDone)
@@ -116,6 +108,13 @@ public class PlayerAid : MonoBehaviour
             }
 
         }
+        //else if (TriggerArea1.activeInHierarchy || TriggerArea2.activeInHierarchy || TriggerArea3.activeInHierarchy || TriggerArea4.activeInHierarchy && !MonstersInstructions.activeInHierarchy)
+        //{
+        //    DeactivateAid();
+        //    MonstersInstructions.SetActive(true);
+        //    AidSound.clip = MonstersInstructions.GetComponent<AudioSource>().clip;
+
+        //}
     }
 
    

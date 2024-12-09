@@ -14,7 +14,7 @@ public class PitInteraction : MonoBehaviour
     [SerializeField] private GameObject UI;
 
     private float pitTime = 0f;
-    private float maxTime = 2f; 
+    private float maxTime = 0.5f; 
 
     void Start()
     {
@@ -34,12 +34,16 @@ public class PitInteraction : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        
         if (other.CompareTag("Platform"))
         {
             //platformsTouched++;
+            this.GetComponent<AudioSource>().Play();
+
             pitTime = 0f; 
         
         }else if (other.CompareTag("PitFall")){
+
             
             pitTime += Time.deltaTime;
             if (pitTime > maxTime)
@@ -63,6 +67,8 @@ public class PitInteraction : MonoBehaviour
     {
         pit.SetActive(false);
         fail.SetActive(true);
+        virusArea.SetActive(true);
+        virusArea.GetComponent<Renderer>().enabled = true;
         virus.tag = "Respawn"; 
 
     }
